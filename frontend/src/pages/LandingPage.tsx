@@ -28,7 +28,7 @@ const LandingPage = () => {
           <h1 className="text-3xl font-bold">Karu Ajira Club</h1>
           <div className="space-x-6">
             <Link to="/login" className="hover:underline">Login</Link>
-            <Link to="/register" className="hover:underline">Register</Link>
+            <Link to="/singup" className="hover:underline">Register</Link>
             <Link to="/aboutus" className="hover:underline">About Us</Link>
             <Link to="/contactus" className="hover:underline">Contact Us</Link>
           </div>

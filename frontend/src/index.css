@@ -1,1 +1,4 @@
 @import "tailwindcss";
+.about {
+    background-image: url("./assets/ajiralogo.jpg");
+}

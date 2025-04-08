@@ -1,7 +1,8 @@
-import prisma from '/prisma/client.js';
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
+
 export const createPost = async (req, res) => {
   const { userId, mediaUrl, content, role } = req.body;
-
   try {
     const isVerified = role === 'ADMIN';
 
@@ -10,7 +11,7 @@ export const createPost = async (req, res) => {
         userId,
         mediaUrl,
         content,
-        isVerified,
+        isVerified
       },
     });
 
@@ -20,6 +21,26 @@ export const createPost = async (req, res) => {
     res.status(500).json({ message: 'Failed to create post' });
   }
 };
+export const getPostsByUser = async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const posts = await prisma.post.findMany({
+      where: {
+        userId: Number(userId), 
+      },
+      include: {
+        user: true,
+      },
+    });
+
+    res.json(posts);
+  } catch (error) {
+    console.error('Error fetching posts by user:', error);
+    res.status(500).json({ message: 'Failed to fetch posts for this user' });
+  }
+};
+
 export const getVerifiedPosts = async (_req, res) => {
   try {
     const posts = await prisma.post.findMany({

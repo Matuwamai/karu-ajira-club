@@ -25,6 +25,7 @@ model Post {
   userId    Int
   mediaUrl  String?
   content   String
+  isVerified  Boolean @default(false)
   user      User     @relation(fields: [userId], references: [id])
 }
 

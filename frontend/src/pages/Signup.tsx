@@ -37,9 +37,9 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-yellow-400 flex items-center justify-center bg-cover bg-center">
+    <div className="min-h-screen bg-gradient-to-br from-green-700 to-red-700 flex items-center justify-center bg-cover bg-center">
       <div className="bg-white bg-opacity-95 rounded-2xl shadow-2xl p-8 w-full max-w-lg">
-        <h2 className="text-3xl font-bold text-center text-yellow-500 mb-6">Create Ajira Account</h2>
+        <h2 className="text-3xl font-bold text-center text-green-500 mb-6">Create <span className='text-red-500'>Ajira</span>  Club <span className='text-red-500'>Account</span></h2>
         {feedback && (
           <div className={`text-sm text-center mb-4 font-semibold ${feedback.includes('✅') ? 'text-green-600' : 'text-red-600'}`}>
             {feedback}
@@ -52,12 +52,12 @@ const RegisterPage = () => {
           <input type="text" name="phone" placeholder="Phone Number" onChange={handleChange} required className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-yellow-400" />
           <input type="text" name="regNo" placeholder="Registration Number" onChange={handleChange} required className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-yellow-400" />
           <input type="password" name="password" placeholder="Password" onChange={handleChange} required className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-yellow-400" />
-          <button type="submit" disabled={loading} className="w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600 transition font-semibold">
+          <button type="submit" disabled={loading} className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-red-500 transition font-semibold">
             {loading ? 'Creating...' : 'Register'}
           </button>
         </form>
         <p className="text-center text-sm mt-4">
-          Already a member? <a href="/login" className="text-yellow-600 font-semibold hover:underline">Login</a>
+          Already a member? <a href="/login" className="text-red-600 font-semibold hover:underline">Login</a>
         </p>
       </div>
     </div>

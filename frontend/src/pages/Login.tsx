@@ -32,12 +32,13 @@ const Login = () => {
   };
 
   return (
+    <div className='min-h-screen bg-gradient-to-br from-green-700 to-red-700 flex items-center justify-center bg-cover bg-center'>
     <div
-      className="min-h-screen flex items-center justify-center bg-cover bg-center"
+      className="min-h-screen flex items-center justify-center bg-cover bg-center "
       style={{ backgroundImage: `url('/ajira-bg.jpg')` }}
     >
       <div className="bg-white/80 shadow-lg p-10 rounded-2xl w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center text-[#00a859] mb-6">Ajira Club Login</h1>
+        <h1 className="text-3xl font-bold text-center text-red-500 mb-6"> Karu <span className='text-green-600'>Ajira </span>  Club  <span className='text-green-600'> Login</span></h1>
 
         <form onSubmit={handleLogin} className="space-y-4">
           <input
@@ -56,13 +57,13 @@ const Login = () => {
             value={formData.password}
             onChange={handleChange}
             required
-            className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#00a859]"
+            className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#00a859] text-white p-3 rounded-lg font-semibold hover:bg-[#008f4c] transition duration-300"
+            className="w-full bg-red-500 text-white p-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300"
           >
             {loading ? 'Logging in...' : 'Login'}
           </button>
@@ -72,11 +73,12 @@ const Login = () => {
 
         <p className="text-sm text-center mt-4">
           Don’t have an account?{' '}
-          <a href="/register" className="text-[#00a859] hover:underline">
+          <a href="/signup" className="text-[#00a859] hover:underline">
             Register
           </a>
         </p>
       </div>
+    </div>
     </div>
   );
 };

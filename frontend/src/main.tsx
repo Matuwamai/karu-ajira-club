@@ -6,6 +6,7 @@ import RegisterPage from './pages/Signup'
 import Login from './pages/Login'
 import LandingPage from './pages/LandingPage'
 import AboutUs from './pages/AboutUs'
+import AllUsersPage from './pages/AllUser'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Router>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/login' element={< Login/>} />
         <Route path='/' element={< LandingPage/>} />
         <Route path='/aboutus' element={< AboutUs/>} />
+        <Route path='/users' element={< AllUsersPage/>} />
       </Routes>
     </Router>
   </StrictMode>,

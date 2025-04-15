@@ -28,7 +28,8 @@ const LandingPage = () => {
           <h1 className="text-3xl font-bold">Karu Ajira Club</h1>
           <div className="space-x-6">
             <Link to="/login" className="hover:underline">Login</Link>
-            <Link to="/singup" className="hover:underline">Register</Link>
+            <Link to="/sign
+            up" className="hover:underline">Register</Link>
             <Link to="/aboutus" className="hover:underline">About Us</Link>
             <Link to="/contactus" className="hover:underline">Contact Us</Link>
           </div>
@@ -60,7 +61,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto py-16 px-4 bg-green-100 to bg-red-100 mx-0 w-full relative">
+      <div className="max-w-7xl mx-auto py-16 px-4  mx-0 w-full relative">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-red-600">Welcome <span className='text-green-600'>to Karu</span>  <span className='text-red-500'> Ajira</span> <span className='text-green-600'>Club</span></h2>
           <p className="text-lg text-gray-700 mt-4">

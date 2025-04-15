@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Logo from "../assets/ajiralogo.jpg"
 const AboutUs = () => {
     return (
         <div className="bg-white">
